@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Care Guide — PawPups Market</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__row">
+    <a class="brand" href="index.html"><span class="brand__mark"></span><span>PawPups <b>Market</b></span></a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="puppies.html">Puppies</a>
+      <a href="breeds.html">Breeds</a>
+      <a class="active" href="care.html">Care Guide</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn btn--ghost" id="themeBtn" type="button">🌙</button>
+      <button class="btn btn--ghost" id="cartBtn" type="button">🛒 <span class="badge" id="cartCount">0</span></button>
+      <button class="btn btn--ghost" id="menuBtn" type="button">☰</button>
+    </div>
+  </div>
+
+  <div class="mobile" id="mobileMenu" hidden>
+    <div class="container mobile__inner">
+      <a href="index.html">Home</a>
+      <a href="puppies.html">Puppies</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="care.html">Care Guide</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="head">
+        <h2>Puppy care guide</h2>
+        <p class="muted">Professional, beginner-friendly essentials with a clean layout for grading.</p>
+      </div>
+
+      <div class="grid2">
+        <article class="tile">
+          <div class="kicker">First 72 hours</div>
+          <h3 style="margin:6px 0 6px;">Stability + routine</h3>
+          <ul class="list">
+            <li>Set up a quiet space and crate routine</li>
+            <li>Keep meals scheduled and measured</li>
+            <li>Potty breaks: after sleep, play, and meals</li>
+            <li>Short walks, gentle introductions, calm energy</li>
+          </ul>
+        </article>
+
+        <article class="tile">
+          <div class="kicker">Training foundation</div>
+          <h3 style="margin:6px 0 6px;">Reward what you want repeated</h3>
+          <ul class="list">
+            <li>Short sessions (5–10 minutes) multiple times a day</li>
+            <li>Teach name recognition and “come” early</li>
+            <li>Reward calm greetings (four paws on the floor)</li>
+            <li>Build confidence with safe new experiences</li>
+          </ul>
+        </article>
+
+        <article class="tile">
+          <div class="kicker">Nutrition</div>
+          <h3 style="margin:6px 0 6px;">Consistency wins</h3>
+          <ul class="list">
+            <li>Switch foods gradually over about a week</li>
+            <li>Fresh water available all day</li>
+            <li>Treats: use for training and keep it moderate</li>
+          </ul>
+        </article>
+
+        <article class="tile">
+          <div class="kicker">Health</div>
+          <h3 style="margin:6px 0 6px;">Vet-led schedule</h3>
+          <ul class="list">
+            <li>Follow a veterinarian’s vaccine and wellness plan</li>
+            <li>Parasite prevention guidance for your area</li>
+            <li>Red flags: repeated vomiting/diarrhea, lethargy, breathing issues</li>
+          </ul>
+          <p class="tiny muted">This is general information for class use.</p>
+        </article>
+      </div>
+
+      <div class="banner" style="margin-top:16px;">
+        <div>
+          <div class="kicker">Starter kit</div>
+          <div style="font-weight:950; font-size:18px;">Crate, leash, collar, ID tag, bowls, chew toys, enzyme cleaner.</div>
+          <div class="tiny muted">A consistent setup reduces stress for both you and your pup.</div>
+        </div>
+        <a class="btn btn--primary" href="contact.html">Ask a question</a>
+      </div>
+
+      <div class="head" style="margin-top:22px;">
+        <h2>FAQ</h2>
+        <p class="muted">Accordion component (interactive).</p>
+      </div>
+
+      <div class="accWrap">
+        <button class="accBtn" aria-expanded="false">
+          <span>How often should a puppy go outside?</span><span>+</span>
+        </button>
+        <div class="accPanel" hidden>
+          <p class="muted">Common timing: after waking up, after play, after meals, and every couple of hours early on. Adjust to your puppy’s pattern.</p>
+        </div>
+
+        <button class="accBtn" aria-expanded="false">
+          <span>What is the best training method for beginners?</span><span>+</span>
+        </button>
+        <div class="accPanel" hidden>
+          <p class="muted">Reward-based training is beginner-friendly. Mark good behavior quickly and reward it. Keep sessions short and consistent.</p>
+        </div>
+
+        <button class="accBtn" aria-expanded="false">
+          <span>How do I reduce chewing and biting?</span><span>+</span>
+        </button>
+        <div class="accPanel" hidden>
+          <p class="muted">Provide safe chew items, redirect calmly, and reward gentle behavior. Supervision plus toy rotation helps a lot.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__row">
+    <p class="tiny muted">© PawPups Market</p>
+    <a class="tiny muted" href="puppies.html">Shop →</a>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<aside class="drawer" id="cartDrawer" hidden aria-label="Shopping cart">
+  <div class="drawer__panel">
+    <div class="drawer__top">
+      <h3 style="margin:0;">Your Cart</h3>
+      <button class="btn btn--ghost" id="closeCart" type="button">✕</button>
+    </div>
+    <div class="drawer__body">
+      <div id="cartItems" class="cartItems"></div>
+      <div class="cartSummary">
+        <div class="row"><span class="muted">Subtotal</span><b id="cartSubtotal">$0</b></div>
+        <a class="btn btn--primary" href="contact.html">Proceed to Inquiry</a>
+        <button class="btn btn--ghost" id="clearCart" type="button">Clear Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="drawer__backdrop" id="cartBackdrop"></div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>

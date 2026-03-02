@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reviews — PawPups Market</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__row">
+    <a class="brand" href="index.html"><span class="brand__mark"></span><span>PawPups <b>Market</b></span></a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="puppies.html">Puppies</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="care.html">Care Guide</a>
+      <a class="active" href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn btn--ghost" id="themeBtn" type="button">🌙</button>
+      <button class="btn btn--ghost" id="cartBtn" type="button">🛒 <span class="badge" id="cartCount">0</span></button>
+      <button class="btn btn--ghost" id="menuBtn" type="button">☰</button>
+    </div>
+  </div>
+
+  <div class="mobile" id="mobileMenu" hidden>
+    <div class="container mobile__inner">
+      <a href="index.html">Home</a>
+      <a href="puppies.html">Puppies</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="care.html">Care Guide</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="head">
+        <h2>Customer reviews</h2>
+        <p class="muted">Professional testimonials (demo) + a working review submit component.</p>
+      </div>
+
+      <div class="grid3" id="reviewList">
+        <article class="tile">
+          <p class="stars">★★★★★</p>
+          <h3 style="margin:0 0 6px;">“Super smooth process.”</h3>
+          <p class="muted">Clear communication and a great care guide. The whole flow felt professional.</p>
+          <p class="tiny muted">— Jordan M.</p>
+        </article>
+        <article class="tile">
+          <p class="stars">★★★★★</p>
+          <h3 style="margin:0 0 6px;">“Perfect for first-time owners.”</h3>
+          <p class="muted">The quick view and cart comparison made it easy to decide.</p>
+          <p class="tiny muted">— Alana R.</p>
+        </article>
+        <article class="tile">
+          <p class="stars">★★★★☆</p>
+          <h3 style="margin:0 0 6px;">“Great UI and details.”</h3>
+          <p class="muted">The listing cards were clean and the inquiry form was easy.</p>
+          <p class="tiny muted">— Chris T.</p>
+        </article>
+      </div>
+
+      <div class="tile tile--big soft" style="margin-top:14px;">
+        <h3 style="margin:0 0 10px;">Leave a review (demo)</h3>
+        <form id="reviewForm" class="form">
+          <div class="grid2">
+            <div>
+              <label class="label" for="rName">Name</label>
+              <input class="input" id="rName" required placeholder="Your name" />
+            </div>
+            <div>
+              <label class="label" for="rStars">Rating</label>
+              <select class="input" id="rStars">
+                <option>★★★★★</option>
+                <option>★★★★☆</option>
+                <option>★★★☆☆</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="label" for="rText">Review</label>
+            <textarea class="input" id="rText" rows="4" required placeholder="Write a short review..."></textarea>
+          </div>
+          <div class="row" style="justify-content:flex-start;">
+            <button class="btn btn--primary" type="submit">Submit Review</button>
+            <span class="tiny muted" id="reviewStatus" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__row">
+    <p class="tiny muted">© PawPups Market</p>
+    <a class="tiny muted" href="contact.html">Inquiry →</a>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<aside class="drawer" id="cartDrawer" hidden aria-label="Shopping cart">
+  <div class="drawer__panel">
+    <div class="drawer__top">
+      <h3 style="margin:0;">Your Cart</h3>
+      <button class="btn btn--ghost" id="closeCart" type="button">✕</button>
+    </div>
+    <div class="drawer__body">
+      <div id="cartItems" class="cartItems"></div>
+      <div class="cartSummary">
+        <div class="row"><span class="muted">Subtotal</span><b id="cartSubtotal">$0</b></div>
+        <a class="btn btn--primary" href="contact.html">Proceed to Inquiry</a>
+        <button class="btn btn--ghost" id="clearCart" type="button">Clear Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="drawer__backdrop" id="cartBackdrop"></div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>

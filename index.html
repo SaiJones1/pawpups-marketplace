@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PawPups Market — Puppies for Sale</title>
+  <meta name="description" content="Professional dog-selling marketplace demo: listings, cart, inquiries, breed guide, care guide, reviews." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar" id="top">
+  <div class="container topbar__row">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>PawPups <b>Market</b></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="active" href="index.html">Home</a>
+      <a href="puppies.html">Puppies</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="care.html">Care Guide</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn btn--ghost" id="themeBtn" type="button" aria-label="Toggle theme">🌙</button>
+      <button class="btn btn--ghost" id="cartBtn" type="button" aria-label="Open cart">
+        🛒 <span class="badge" id="cartCount">0</span>
+      </button>
+      <button class="btn btn--ghost" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+
+  <div class="mobile" id="mobileMenu" hidden>
+    <div class="container mobile__inner">
+      <a href="index.html">Home</a>
+      <a href="puppies.html">Puppies</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="care.html">Care Guide</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="pill">AI-Generated • Class Project • Marketplace Demo</p>
+        <h1>Shop puppies with a <span class="grad">premium</span> experience and a <span class="grad">responsible</span> flow.</h1>
+        <p class="lead">
+          PawPups Market is a professional dog-selling website demo featuring searchable puppy listings,
+          cart comparisons, breed guidance, and an inquiry-based checkout.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="puppies.html">Browse Puppies</a>
+          <a class="btn btn--ghost" href="contact.html">Submit Inquiry</a>
+        </div>
+
+        <div class="trust" aria-label="Trust badges">
+          <span class="chip">✓ Vet check flow (demo)</span>
+          <span class="chip">✓ Transparent pricing</span>
+          <span class="chip">✓ Care guide included</span>
+          <span class="chip">✓ Secure-style inquiry</span>
+        </div>
+
+        <div class="banner" style="margin-top:16px;">
+          <div>
+            <div class="kicker">Featured Today</div>
+            <div style="font-weight:950; font-size:18px;">Compare puppies in your cart, then inquire in one click.</div>
+            <div class="tiny muted">Tip: add 2–3 pups to cart to show the full experience.</div>
+          </div>
+          <a class="btn btn--primary" href="puppies.html">Open Marketplace</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <span class="tag">Featured Puppies</span>
+        </div>
+        <div class="card__body">
+          <div class="featureGrid" id="featuredWrap"></div>
+
+          <div class="hr"></div>
+
+          <div class="tile soft">
+            <div class="kicker">Marketplace Standards (Demo)</div>
+            <ul class="list">
+              <li>Age-appropriate wellness exam and care schedule</li>
+              <li>Temperament notes and starter training highlights</li>
+              <li>Clear inquiry process and post-purchase tips</li>
+            </ul>
+            <div class="row" style="margin-top:10px; justify-content:flex-start;">
+              <a class="btn btn--ghost" href="care.html">Read Care Guide</a>
+              <a class="btn btn--ghost" href="breeds.html">Explore Breeds</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="head">
+        <h2>How the buying flow works</h2>
+        <p class="muted">Looks like a real storefront, stays class-safe (demo checkout).</p>
+      </div>
+
+      <div class="grid3">
+        <article class="tile">
+          <div class="kicker">Step 1</div>
+          <h3 style="margin:6px 0 6px;">Browse + filter</h3>
+          <p class="muted">Search by breed or name, filter by energy and budget, then sort results.</p>
+        </article>
+        <article class="tile">
+          <div class="kicker">Step 2</div>
+          <h3 style="margin:6px 0 6px;">Quick view + cart</h3>
+          <p class="muted">Open quick details, then add to cart to compare prices and options.</p>
+        </article>
+        <article class="tile">
+          <div class="kicker">Step 3</div>
+          <h3 style="margin:6px 0 6px;">Inquiry checkout</h3>
+          <p class="muted">Complete a secure-style inquiry form to reserve/purchase (demo).</p>
+        </article>
+      </div>
+
+      <div class="banner" style="margin-top:16px;">
+        <div>
+          <div class="kicker">A-Level Touch</div>
+          <div style="font-weight:950; font-size:18px;">Multi-page UX, persistent cart, and interactive components.</div>
+          <div class="tiny muted">Everything runs on GitHub Pages with zero backend.</div>
+        </div>
+        <a class="btn btn--primary" href="puppies.html">Shop Now</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__row">
+    <p class="tiny muted">© PawPups Market • AI-Generated Class Project</p>
+    <a class="tiny muted" href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<aside class="drawer" id="cartDrawer" hidden aria-label="Shopping cart">
+  <div class="drawer__panel">
+    <div class="drawer__top">
+      <h3 style="margin:0;">Your Cart</h3>
+      <button class="btn btn--ghost" id="closeCart" type="button" aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer__body">
+      <div id="cartItems" class="cartItems"></div>
+      <div class="cartSummary">
+        <div class="row">
+          <span class="muted">Subtotal</span>
+          <b id="cartSubtotal">$0</b>
+        </div>
+        <p class="tiny muted">Demo checkout: use Contact → Inquiry to complete the flow.</p>
+        <a class="btn btn--primary" href="contact.html">Proceed to Inquiry</a>
+        <button class="btn btn--ghost" id="clearCart" type="button">Clear Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="drawer__backdrop" id="cartBackdrop"></div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
